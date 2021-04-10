@@ -248,3 +248,55 @@
               </select>
             </div>
           </div>
+
+          <div>
+            <div id="person" style="float:left;margin-bottom:20px;">
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">Full Name:</label><input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* First and Last Names')" name="name_001" style="width:200px;"
+                  type="search" placeholder="* First and Last Names" required pattern="^[a-zA-Z\s]*$" oninvalid="this.setCustomValidity('Name required')" oninput="this.setCustomValidity('')">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">Email:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Required')" name="email_001" style="width:200px;" type="search" placeholder="* Required" required
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" oninvalid="this.setCustomValidity('Valid email address required')" oninput="this.setCustomValidity('')">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">Phone:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* If Available')" name="phone_001" style="width:200px;" class type="search" placeholder="* If Available">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">Start date:</label>
+                <input id="sdate" name="startingdate" style="width:200px;" class onfocus="(this.type='date')" onblur="(this.type='text');if (formatDate(this.value)) {this.value=formatDate(this.value)};" placeholder="* Required (Approx Date)"
+                  required>
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:70px;">End date:</label>
+                <input id="edate" name="leavingdate" style="width:200px;" class onfocus="(this.type='date')" onblur="(this.type='text');if (formatDate(this.value)) {this.value=formatDate(this.value);};" placeholder="* Required (Exact Date)" required>
+              </div>
+            </div>
+            <div id="address" style="float:right; ">
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">Address line1:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Address line1 required')" name="addrline1_001" class="addressfields" type="search" placeholder="* Required" required
+                  oninvalid="this.setCustomValidity('Address line1 required')" oninput="this.setCustomValidity('')">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">Address line2:</label>
+                <input name="addrline2_001" class="addressfields" type="search">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">Town/City:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Town or City required')" name="town_001" class="addressfields" type="search" placeholder="* Required" required
+                  oninvalid="this.setCustomValidity('Town or City required')" oninput="this.setCustomValidity('')">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">County:</label>
+                <input name="county_001" class="addressfields" type="search">
+              </div>
+              <div style="display:flex;">
+                <label style="margin-top:8px;text-align:left;width:100px;">Postcode:</label>
+                <input onfocus="this.removeAttribute('placeholder')" onblur="this.setAttribute('placeholder','* Required')" name="postcode_001" class="addressfields" type="search" placeholder="* Required"
+                  pattern="[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2}" required oninvalid="this.setCustomValidity('Valid postcode required')" oninput="this.setCustomValidity('')">
+              </div>
+            </div>
+          </div>
