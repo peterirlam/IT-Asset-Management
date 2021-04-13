@@ -300,3 +300,30 @@
               </div>
             </div>
           </div>
+
+        </div>
+        <div style="clear:both;"></div>
+        <p>Reason for leaving (if known)</p>
+        <div>
+          <textarea name="reasonforleaving" rows="2"></textarea>
+        </div>
+        <p>Outstanding expense claims?</p>
+        <div>
+          <textarea name="outstandingexpenses" rows="2"></textarea>
+        </div>
+        <p>Charity equipment to return?</p>
+        <div>
+          <textarea name="charityequipment" rows="2"></textarea>
+        </div>
+        <div style="width:100%;display:inline-block;">
+          <button id="btnsubmit" style="float:left;" onclick="checkDates(document.getElementById('sdate').value,document.getElementById('edate').value)" type="submit">Submit</button>
+          <div id="progress" style="float:left;display:none;margin-left:60px;margin-top:15px;">
+            <div style="float:left;display:inline;color:red;margin-right:40px;margin-top:10px;">Submitting please wait ...</div>
+            <div class="loader"></div>
+          </div>
+        </div>
+        <input type="hidden" id="days_in_post" name="days_in_post">
+      </form>
+    </div>
+  </div>
+</body>
