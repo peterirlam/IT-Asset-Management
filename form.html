@@ -401,3 +401,183 @@
       }
     }
   }
+
+  // Start new JS Here
+  function deviceSelected() {
+    var device_type = document.getElementById("device-type-dropdown").options[document.getElementById("device-type-dropdown").selectedIndex].value;
+    var os = document.getElementById("device_os");
+    var option;
+    document.getElementById("make-dropdown").selectedIndex = "0";
+    document.getElementById("model-dropdown").selectedIndex = "0";
+    switch (device_type) {
+      case "Chromebook":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "Chrome OS";
+        os.add(option);
+        break;
+      case "All-In-One":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "Select OS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Chrome OS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Windows 10";
+        os.add(option);
+        break;
+
+      case "Laptop":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "Select OS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Windows 7";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Windows 10";
+        os.add(option);
+        break;
+
+      case "Desktop PC":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "Select OS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Chrome OS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Windows 7";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Windows 10";
+        os.add(option);
+        break;
+
+      case "MacBook":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "MacOS";
+        os.add(option);
+        break;
+
+      case "Tablet":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "Select OS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "IOS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Android";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Windows";
+        os.add(option);
+        break;
+
+      case "Mobile Phone":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "Select OS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "IOS";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Android";
+        os.add(option);
+        option = document.createElement("option");
+        option.text = "Windows";
+        os.add(option);
+        break;
+
+      case "Printer":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "N/A";
+        os.add(option);
+        break;
+
+      case "Printer/Scanner":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "N/A";
+        os.add(option);
+        break;
+
+      case "Stand Alone Scanner":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "N/A";
+        os.add(option);
+        break;
+
+      case "Monitor":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "N/A";
+        os.add(option);
+        break;
+
+      case "Wildex Headset (Single)":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "N/A";
+        os.add(option);
+        break;
+
+      case "Wildex Headset (Duo)":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "N/A";
+        os.add(option);
+        break;
+
+      case "Wireless Mouse":
+        // code block
+        var options = document.querySelectorAll('#device_os option');
+        options.forEach(o => o.remove());
+        option = document.createElement("option");
+        option.text = "N/A";
+        os.add(option);
+        break;
+
+      default:
+        // code block
+    }
+  }
+</script>
+
+</html>
