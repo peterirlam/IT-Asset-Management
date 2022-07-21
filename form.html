@@ -355,14 +355,14 @@
 
   function formatDate(thedate) {
     let current_datetime = new Date(thedate)
-    var day;
-    var month;
+    let day;
+    let month;
     if (current_datetime.getDate().toString().length < 2) {
       day = "0" + current_datetime.getDate();
     } else {
       day = current_datetime.getDate();
     }
-    var currentmonth = current_datetime.getMonth() + 1;
+    let currentmonth = current_datetime.getMonth() + 1;
     if (currentmonth.toString().length < 2) {
       month = "0" + currentmonth
     } else {
@@ -378,20 +378,20 @@
 
   function checkDates(startdatestring, enddatestring) {
     if ((startdatestring.length > 0) && (enddatestring.length > 0)) {
-      var isostartDate = startdatestring.split("/");
+      let isostartDate = startdatestring.split("/");
       startdatestring = isostartDate[1] + "/" + isostartDate[0] + "/" + isostartDate[2];
-      var isoendDate = enddatestring.split("/");
+      let isoendDate = enddatestring.split("/");
       enddatestring = isoendDate[1] + "/" + isoendDate[0] + "/" + isoendDate[2];
       // calculation of no. of days between two date
       // To set two dates to two variables
-      //var date1 = new Date("06/30/2019");
-      //var date2= new Date("05/30/2019");
-      var date1 = new Date(startdatestring);
-      var date2 = new Date(enddatestring);
+      //let date1 = new Date("06/30/2019");
+      //let date2= new Date("05/30/2019");
+      let date1 = new Date(startdatestring);
+      let date2 = new Date(enddatestring);
       // Calculate the time difference of the dates
-      var Difference_In_Time = date2.getTime() - date1.getTime();
+      let Difference_In_Time = date2.getTime() - date1.getTime();
       // Calculate the no. of days between the dates
-      var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+      let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
       if (Difference_In_Days >= 0) {
         document.getElementById("days_in_post").value = Difference_In_Days;
         document.getElementById("sdate").setCustomValidity("");
@@ -404,15 +404,15 @@
 
   // Start new JS Here
   function deviceSelected() {
-    var device_type = document.getElementById("device-type-dropdown").options[document.getElementById("device-type-dropdown").selectedIndex].value;
-    var os = document.getElementById("device_os");
-    var option;
+    let device_type = document.getElementById("device-type-dropdown").options[document.getElementById("device-type-dropdown").selectedIndex].value;
+    let os = document.getElementById("device_os");
+    let option;
     document.getElementById("make-dropdown").selectedIndex = "0";
     document.getElementById("model-dropdown").selectedIndex = "0";
     switch (device_type) {
       case "Chromebook":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        let options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "Chrome OS";
@@ -420,7 +420,7 @@
         break;
       case "All-In-One":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "Select OS";
@@ -435,7 +435,7 @@
 
       case "Laptop":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "Select OS";
@@ -450,7 +450,7 @@
 
       case "Desktop PC":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "Select OS";
@@ -468,7 +468,7 @@
 
       case "MacBook":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "MacOS";
@@ -477,7 +477,7 @@
 
       case "Tablet":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "Select OS";
@@ -495,7 +495,7 @@
 
       case "Mobile Phone":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "Select OS";
@@ -513,7 +513,7 @@
 
       case "Printer":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "N/A";
@@ -522,7 +522,7 @@
 
       case "Printer/Scanner":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "N/A";
@@ -531,7 +531,7 @@
 
       case "Stand Alone Scanner":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "N/A";
@@ -540,7 +540,7 @@
 
       case "Monitor":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "N/A";
@@ -549,7 +549,7 @@
 
       case "Wildex Headset (Single)":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "N/A";
@@ -558,7 +558,7 @@
 
       case "Wildex Headset (Duo)":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "N/A";
@@ -567,7 +567,7 @@
 
       case "Wireless Mouse":
         // code block
-        var options = document.querySelectorAll('#device_os option');
+        options = document.querySelectorAll('#device_os option');
         options.forEach(o => o.remove());
         option = document.createElement("option");
         option.text = "N/A";
@@ -581,3 +581,4 @@
 </script>
 
 </html>
+
